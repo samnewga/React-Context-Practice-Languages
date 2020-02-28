@@ -5,8 +5,7 @@ import LanguageContext from './LanguageContext';
 
 export default class AppLang extends Component {
   state = {
-    lang: window.navigator.language,
-    setLang: this.handleSetLang
+    lang: window.navigator.language
   };
 
   handleSetLang = lang => {
@@ -15,7 +14,8 @@ export default class AppLang extends Component {
 
   render() {
     const contextValue = {
-      lang: this.state.lang
+      lang: this.state.lang,
+      setLang: this.handleSetLang
     };
 
     return (
